@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dreamboard Studio MVP
 
 An AI-powered moodboard builder for photographers and visual artists.
@@ -23,3 +24,4 @@ An AI-powered moodboard builder for photographers and visual artists.
 - [ ] Board generator
 - [ ] Stripe paywall
 - [ ] White-label wrapper
+>>>>>>> 66ba43e304eaf5a3ce65f02ff9767cd303d12567
