@@ -73,4 +73,3 @@ webencodings==0.5.1
 websocket-client==1.8.0
 websockets==15.0.1
 wsproto==1.2.0
-yt-dlp @ https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.zip#sha256=d7bd74871aff2c710780d9e8f1c9341d20ccd257783000656b71b282e810cd72
