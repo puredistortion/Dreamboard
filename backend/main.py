@@ -1,11 +1,13 @@
-from fastapi import FastAPI
-from supabase_client import supabase
+from fastapi import UploadFile, File
+from s3_client import upload_file
 
-app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"message": "Dreamboard API is live!"}
+@app.post("/upload-test")
+async def upload_test(file: UploadFile = File(...)):
+    local_path = f"/tmp/{file.filename}"
+    with open(local_path, "wb") as f:
+        f.write(await file.read())
+    url = upload_file(local_path, f"uploads/{file.filename}")
+    return {"url": url}
 
 @app.post("/seed-vibe")
 def seed_vibe():
