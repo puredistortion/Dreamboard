@@ -1,5 +1,14 @@
-from fastapi import UploadFile, File
+from fastapi import FastAPI, UploadFile, File
+from supabase_client import supabase
 from s3_client import upload_file
+
+app = FastAPI()          #  <-- must come BEFORE any @app decorators
+
+# ---------- routes ----------
+
+@app.get("/")
+def read_root():
+    return {"message": "Dreamboard API is live!"}
 
 @app.post("/upload-test")
 async def upload_test(file: UploadFile = File(...)):
